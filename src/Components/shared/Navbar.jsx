@@ -5,15 +5,16 @@ import React from 'react';
 import logo from "@/assets/logo.png"
 import Image from 'next/image';
 import Link from 'next/link';
+import NavLink from './NavLink';
 
 const Navbar = () => {
     const links=<>
-   <Link href={'/'}> <li>Home</li></Link>
-   <Link href={'/all-animals'}> <li>All Animals</li></Link>
-    <Link href={'/about-us'}><li>About Us</li></Link>
+   <NavLink href={'/'}> <li>Home</li></NavLink>
+   <NavLink href={'/all-animals'}> <li>All Animals</li></NavLink>
+    <NavLink href={'/about-us'}><li>About Us</li></NavLink>
     </>;
     return (
-            <div className="navbar  grid gap-4 md:flex bg-base-100 h-full shadow-sm">
+            <div className="navbar p-2 grid gap-4 md:flex bg-base-100 h-full shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,8 +38,13 @@ height={80}/>
     </ul>
   </div>
   <div className="navbar-end  gap-4">
-    <a className="btn btn-primary text-lg">Login</a>
-    <a className="btn text-white text-lg btn-success">Register</a>
+   <Link href='/login'> 
+   <button className="btn btn-primary text-lg">Login</button>
+   </Link>
+   <Link href={'/register'}>
+       <button className="btn text-white text-lg btn-success">Register</button>
+   </Link>
+
   </div>
 </div>
     );
