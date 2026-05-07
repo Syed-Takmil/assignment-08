@@ -9,7 +9,7 @@ const page = async() => {
     const data=await res.json()
     console.log(data)
     return (
-        <div className="w-29/30 mx-auto my-5 container grid grid-cols-1 md:grid-cols-3 gap-4 ">
+        <div className="w-28/30 mx-auto my-5 container grid grid-cols-1 md:grid-cols-3 gap-4 ">
             {
                 data.map(n=>(
  <AnimalCard key={n.id} animal={n}></AnimalCard>

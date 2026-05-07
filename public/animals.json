@@ -1,3 +1,6 @@
+
+
+
 [
   {
     "id": 1,
@@ -22,7 +25,7 @@
     "age": 2,
     "location": "Rajshahi",
     "description": "Popular goat breed, healthy and perfect for Qurbani.",
-    "image": "https://picsum.photos/seed/goat1/600/400",
+    "image": "https://i.ibb.co.com/Psr7k7pb/behnaz-shggp-SBQBAc-unsplash.jpg",
     "category": "Small Animal"
   },
   {
@@ -48,7 +51,7 @@
     "age": 3,
     "location": "Kushtia",
     "description": "Strong and healthy local cow raised naturally.",
-    "image": "https://picsum.photos/seed/cow3/600/400",
+    "image": "https://i.ibb.co.com/Z6ns4csm/sssss.jpg",
     "category": "Large Animal"
   },
   {
@@ -61,7 +64,7 @@
     "age": 2,
     "location": "Khulna",
     "description": "Clean and well-fed goat suitable for sacrifice.",
-    "image": "https://picsum.photos/seed/goat2/600/400",
+    "image": "https://i.ibb.co.com/Psr7k7pb/behnaz-shggp-SBQBAc-unsplash.jpg",
     "category": "Small Animal"
   },
   {
@@ -74,7 +77,7 @@
     "age": 5,
     "location": "Chattogram",
     "description": "Large bull, perfect for group Qurbani.",
-    "image": "https://picsum.photos/seed/bull1/600/400",
+    "image": "https://i.ibb.co.com/Kphj1RqP/900x60017.jpg",
     "category": "Large Animal"
   },
   {
@@ -87,7 +90,7 @@
     "age": 1,
     "location": "Sylhet",
     "description": "Small size goat, budget friendly option.",
-    "image": "https://picsum.photos/seed/goat3/600/400",
+    "image": "https://i.ibb.co.com/Psr7k7pb/behnaz-shggp-SBQBAc-unsplash.jpg",
     "category": "Small Animal"
   },
   {
@@ -100,7 +103,7 @@
     "age": 3,
     "location": "Mymensingh",
     "description": "Balanced size and good health condition.",
-    "image": "https://picsum.photos/seed/cow4/600/400",
+    "image": "https://i.ibb.co.com/FkRk7T6r/clement-mabula-UYZdc-NH7-OKg-unsplash.jpg",
     "category": "Large Animal"
   },
   {
@@ -113,7 +116,7 @@
     "age": 2,
     "location": "Barisal",
     "description": "Premium quality goat, well maintained.",
-    "image": "https://picsum.photos/seed/goat4/600/400",
+    "image": "https://i.ibb.co.com/9kkHgrtk/detait-Zv3-O-l-SEXg4-unsplash.jpg",
     "category": "Small Animal"
   },
   {
@@ -126,7 +129,7 @@
     "age": 5,
     "location": "Dhaka",
     "description": "Very large bull, suitable for multiple shares.",
-    "image": "https://picsum.photos/seed/bull2/600/400",
+    "image": "https://i.ibb.co.com/Kphj1RqP/900x60017.jpg",
     "category": "Large Animal"
   },
   {
@@ -139,7 +142,7 @@
     "age": 2,
     "location": "Rangpur",
     "description": "Classic deshi goat, healthy and active.",
-    "image": "https://picsum.photos/seed/goat5/600/400",
+    "image": "https://i.ibb.co.com/spsyXDhn/detait-Zv3-O-l-SEXg4-unsplash.jpg",
     "category": "Small Animal"
   },
   {
@@ -152,7 +155,7 @@
     "age": 4,
     "location": "Rajshahi",
     "description": "Premium hybrid cow with strong build.",
-    "image": "https://picsum.photos/seed/cow5/600/400",
+    "image": "https://i.ibb.co.com/hRmC6m19/ss.webp",
     "category": "Large Animal"
   }
 ]

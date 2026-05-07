@@ -10,7 +10,7 @@ import NavLink from './NavLink';
 const Navbar = () => {
     const links=<>
    <NavLink href={'/'}> <li>Home</li></NavLink>
-   <NavLink href={'/all-animals'}> <li>All Animals</li></NavLink>
+   <NavLink href={'/animals'}> <li>All Animals</li></NavLink>
     <NavLink href={'/about-us'}><li>About Us</li></NavLink>
     </>;
     return (
