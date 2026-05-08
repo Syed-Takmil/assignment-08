@@ -14,7 +14,7 @@ const Navbar = () => {
     <NavLink href={'/about-us'}><li>About Us</li></NavLink>
     </>;
     return (
-            <div className="navbar p-2 grid gap-4 md:flex bg-base-100 h-full shadow-sm">
+            <div className="navbar  p-2 grid gap-4 md:flex bg-base-100 h-full shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,9 +27,10 @@ const Navbar = () => {
       </ul>
     </div>
    
-<Image src={logo} alt='logo'
+<Link href={"/"}><Image src={logo} alt='logo'
+className="w-50 h-auto"
 width={200}
-height={80}/>
+height={80}/></Link>
    
   </div>
   <div className="navbar-center hidden  lg:flex">

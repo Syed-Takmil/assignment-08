@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const AnimalCard = ({animal}) => {
-    const{id,name,price,description,image,category}=animal;
+    const{id,name,price,description,image,category}=animal
     return (
 <div className="card bg-base-100 p-3 h-125 shadow-xl  transition-all
                     duration-300 hover:translate-y-1.5 hover:shadow-lg hover:cursor-pointer">
@@ -20,7 +20,7 @@ const AnimalCard = ({animal}) => {
     </p>
     <div className="card-actions">
       <Link href={`/animalDetails/${id}`}>
-      <button className="btn btn-active btn-soft">Get Details </button></Link>
+      <button className="btn btn-info btn-soft">Get Details </button></Link>
     </div>
   </div>
 </div>
