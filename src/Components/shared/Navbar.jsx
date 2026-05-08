@@ -1,13 +1,20 @@
+
+
+
+
+"use client"
 import React from 'react';
-
-
-
 import logo from "@/assets/logo.png"
 import Image from 'next/image';
 import Link from 'next/link';
 import NavLink from './NavLink';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
+  
+const { data: session } = authClient.useSession()
+const user=session?.user
+console.log(user)
     const links=<>
    <NavLink href={'/'}> <li>Home</li></NavLink>
    <NavLink href={'/animals'}> <li>All Animals</li></NavLink>
@@ -38,15 +45,28 @@ height={80}/></Link>
     {links}
     </ul>
   </div>
-  <div className="navbar-end  gap-4">
-   <Link href='/login'> 
-   <button className="btn btn-primary text-lg">Login</button>
-   </Link>
-   <Link href={'/register'}>
+
+  {user ? (
+    <div className="navbar-end  gap-4">
+      <span>Welcome, {user.name}!</span>
+      <Image src={user.image} alt="Profile Picture" width={40} height={40} className="rounded-full"/>
+      <Link href='/login'> 
+      <button 
+      onClick={ async () => await authClient.signOut() }
+      className="btn btn-primary text-lg">Logout</button>
+      </Link>
+    </div>
+  ) : (
+    <div className="navbar-end  gap-4">
+     <Link href='/login'> 
+     <button className="btn btn-primary text-lg">Login</button>
+     </Link>
+     <Link href={'/register'}>
        <button className="btn text-white text-lg btn-success">Register</button>
    </Link>
 
   </div>
+  )}
 </div>
     );
 };
