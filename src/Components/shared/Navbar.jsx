@@ -4,6 +4,8 @@
 
 "use client"
 import React from 'react';
+
+
 import logo from "@/assets/logo.png"
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,7 +19,7 @@ const user=session?.user
     const links=<>
    <NavLink href={'/'}> <li>Home</li></NavLink>
    <NavLink href={'/animals'}> <li>All Animals</li></NavLink>
-    <NavLink href={'/about-us'}><li>About Us</li></NavLink>
+    <NavLink href={'/my-profile'}><li>My Profile</li></NavLink>
     </>;
     return (
             <div className="navbar  p-2 grid gap-4 md:flex bg-base-100 h-full shadow-sm">

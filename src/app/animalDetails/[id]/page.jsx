@@ -1,20 +1,23 @@
 
 
 
+
+import BookingForm from '@/Components/BookingForm';
 import Image from 'next/image';
-import React from 'react';
+
 
 const DetailsPage = async({params}) => {
   const res = await fetch('http://localhost:3000/animals.json');
   const data = await res.json();
   const param=await params;
+  
       const animal = data.find(item => item.id === parseInt(param.id));
          const{id,name,type,breed,price,weight,age,location,description,image,category}=animal;
          const infoStyle="flex bg-base-100 p-2 rounded-xl justify-between transition-all hover:-translate-y-1.25 hover:shadow-lg shadow-sm duration-300 border-gray-200 border";
          const valueStyle="font-semibold text-green-500";
          const qStyle="font-extralight"
     return (
-        <div className='my-5  py-auto grid md:flex  justify-between items-center w-10/12
+        <div className='my-5  py-auto grid grid-cols-1 lg:grid-cols-2 gap-2 justify-between items-center w-10/12
          mx-auto'>
                   <figure>
        <Image 
@@ -51,9 +54,14 @@ const DetailsPage = async({params}) => {
             <span className={valueStyle}> {location}</span>
              </div>
    </div>
-            <button className=' w-full btn btn-info'>Buy Now</button>
-     </div>  
 
+         <a href="#booking-form">
+             <button className=' w-full btn btn-info'>Click here to Book Now</button>
+         </a>
+     </div>  
+      <div id='booking-form' className='col-span-2 w-full'>
+        <BookingForm/>
+      </div>
         </div>
     );
 };
