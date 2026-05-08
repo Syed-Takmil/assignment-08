@@ -5,9 +5,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { Eye, EyeOff } from "lucide-react";
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const HandleLogin = async (e) => {
     e.preventDefault();
@@ -68,7 +70,7 @@ const LoginPage = () => {
       style={{ backgroundImage: `url(${pic.src})` }}
     >
       <form onSubmit={HandleLogin}>
-        <fieldset className="fieldset grid gap-3 w-xl p-5 border rounded-box bg-transparent">
+        <fieldset className="fieldset grid gap-3 md:w-xl p-5 border rounded-box bg-transparent">
 
           <legend className="text-lg font-bold">Login</legend>
 
@@ -83,14 +85,11 @@ const LoginPage = () => {
           />
 
 <label htmlFor="password" className="font-semibold text-lg">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            className="input w-full"
-            placeholder="Password"
-            required
-          />
+      <div className="relative">
+            <input name="password" type={showPassword ? "text" : "password"} className="input w-full" placeholder="Password" required />
+       <span onClick={() => setShowPassword(!showPassword)} className="absolute bottom-2 right-2 cursor-pointer">
+        {showPassword ? <EyeOff /> : <Eye color="#000000" strokeWidth={2.25} />}</span>
+        </div>
 
           <button className="btn btn-primary" disabled={loading}>
             {loading ? "Logging in..." : "Login"}

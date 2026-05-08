@@ -14,7 +14,6 @@ const Navbar = () => {
   
 const { data: session } = authClient.useSession()
 const user=session?.user
-console.log(user)
     const links=<>
    <NavLink href={'/'}> <li>Home</li></NavLink>
    <NavLink href={'/animals'}> <li>All Animals</li></NavLink>

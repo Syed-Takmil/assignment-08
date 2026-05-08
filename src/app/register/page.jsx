@@ -5,9 +5,12 @@ import pic from "@/assets/ether.png";
 import Image from "next/image";
 import Link from "next/link";
 import { authClient } from "../../lib/auth-client";
+import { toast } from "react-toastify";
+
+import { Eye, EyeClosedIcon, EyeOff } from "lucide-react";
 
 const RegisterPage = () => {
-
+const[showPassword, setShowPassword] = useState(false);
   const HandleSignUp = async () => {
   const data = await authClient.signIn.social({
     provider: "google",
@@ -20,7 +23,7 @@ const RegisterPage = () => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg("");
-
+const toastId = toast.loading("Creating account...");
     const username = e.target.username.value;
     const email = e.target.email.value;
     const photoURL = e.target.photoURL.value;
@@ -34,19 +37,39 @@ const RegisterPage = () => {
         image: photoURL,
       });
 
-      console.log("DATA:", data);
-      console.log("ERROR:", error);
+      // console.log("DATA:", data);
+      // console.log("ERROR:", error);
 
       if (error) {
+        toast.update(toastId, {
+          render: error.message || "Something went wrong",
+          type: "error",
+          isLoading: false,
+          autoClose: 2000,
+        });
         setErrorMsg(error.message || "Something went wrong");
         setLoading(false);
         return;
       }
 
       // success redirect
+    setTimeout(() => {
       window.location.href = "/login";
+    }, 5000);
+      toast.update(toastId, {
+        render: "Registration successful! Please log in.",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+      });
     } catch (err) {
       setErrorMsg("Server error occurred");
+      toast.update(toastId, {
+        render: "Server error occurred",
+        type: "error",
+        isLoading: false,
+        autoClose: 4000,
+      });
       console.log(err);
     }
 
@@ -55,7 +78,7 @@ const RegisterPage = () => {
 
   return (
     <div
-      className="flex flex-col-reverse gap-3 lg:flex-row container justify-center items-center min-h-screen w-full"
+      className="flex flex-col-reverse gap-3 lg:flex-row container justify-center w-screen items-center min-h-screen "
       style={{ backgroundImage: `url(${pic.src})` }}
     >
       <Image
@@ -67,7 +90,7 @@ const RegisterPage = () => {
       />
 
       <form onSubmit={HandleRegister}>
-        <fieldset className="fieldset grid gap-2 w-xl p-5 border rounded-box bg-transparent">
+        <fieldset className="fieldset relative grid gap-2 md:w-xl p-5 border rounded-box bg-transparent">
 
           <legend className="text-lg font-bold">User Registration</legend>
 <label htmlFor="username"
@@ -78,8 +101,12 @@ className="font-semibold text-lg">UserName</label>
           <label htmlFor="photoURL" className="font-semibold text-lg">Photo URL</label>
           <input name="photoURL" type="url" className="input w-full" placeholder="Photo URL" required />
           <label htmlFor="password" className="font-semibold text-lg">Password</label>
-          <input name="password" type="password" className="input w-full" placeholder="Password" required />
-
+        <div className="relative">
+          
+          <input name="password" type={showPassword ? "text" : "password"} className="input w-full" placeholder="Password" required />
+       <span onClick={() => setShowPassword(!showPassword)} className="absolute bottom-2 right-2 cursor-pointer">
+        {showPassword ? <EyeOff /> : <Eye color="#000000" strokeWidth={2.25} />}</span>
+        </div>
           {errorMsg && (
             <p className="text-red-500 text-sm">{errorMsg}</p>
           )}
