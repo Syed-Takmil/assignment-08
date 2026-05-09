@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 
 const DetailsPage = async({params}) => {
-  const res = await fetch('https://assignment-08-gilt.vercel.app/animals.json');
+  const res = await fetch('https://a-08qurbani-hat.vercel.app/animals.json');
   const data = await res.json();
   const param=await params;
   

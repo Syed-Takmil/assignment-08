@@ -10,7 +10,7 @@ const Page = () => {
 const[loading,setLoading]=useState(true)
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("https://assignment-08-gilt.vercel.app/animals.json");
+      const res = await fetch("https://a-08qurbani-hat.vercel.app/animals.json");
       const result = await res.json();
 
       setData(result);
