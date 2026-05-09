@@ -33,6 +33,7 @@ The purpose of QurbaniHat is to simplify the process of finding and booking live
 -  Toast notifications for success/error handling
 -  Google Sign In support
 
+
 ---
 
 ##  Technologies Used
