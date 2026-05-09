@@ -48,7 +48,7 @@ height={80}/></Link>
   </div>
 
   {user ? (
-    <div className="navbar-end  gap-4">
+    <div className="navbar-end ml-5 lg:ml-1 gap-4">
       <span>Welcome, {user.name}!</span>
       <Image src={user.image} alt="Profile Picture" width={40} height={40} className="rounded-full"/>
       <Link href='/login'> 
@@ -58,7 +58,7 @@ height={80}/></Link>
       </Link>
     </div>
   ) : (
-    <div className="navbar-end  gap-4">
+    <div className="navbar-end ml-5  lg:ml-1 gap-4">
      <Link href='/login'> 
      <button className="btn btn-primary text-lg">Login</button>
      </Link>
