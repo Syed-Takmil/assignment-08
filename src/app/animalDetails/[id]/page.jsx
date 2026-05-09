@@ -62,7 +62,7 @@ const DetailsPage = async({params}) => {
              <button className=' w-full btn btn-info'>Click here to Book Now</button>
          </a>
      </div>  
-      <div id='booking-form' className='col-span-2 w-full'>
+      <div id='booking-form' className=' lg:col-span-2 w-full'>
         <BookingForm/>
       </div>
         </div>
