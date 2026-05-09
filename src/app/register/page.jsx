@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 
 import { Eye, EyeClosedIcon, EyeOff } from "lucide-react";
 
+
 const RegisterPage = () => {
 const[showPassword, setShowPassword] = useState(false);
   const HandleSignUp = async () => {

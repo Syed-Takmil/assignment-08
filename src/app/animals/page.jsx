@@ -1,3 +1,6 @@
+
+
+
 "use client";
 
 import AnimalCard from "@/Components/AnimalCard";

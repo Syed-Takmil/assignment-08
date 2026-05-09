@@ -4,7 +4,10 @@
 
 import BookingForm from '@/Components/BookingForm';
 import Image from 'next/image';
-
+ export const metadata = {
+  title: 'Animal Details',
+  description: 'Detailed information about the selected animal, including its breed, age, weight, and location.',
+}
 
 const DetailsPage = async({params}) => {
   const res = await fetch('https://a-08qurbani-hat.vercel.app/animals.json');
