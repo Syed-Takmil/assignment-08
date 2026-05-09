@@ -32,8 +32,8 @@ const toastId = toast.loading("Creating account...");
     try {
       const { data, error } = await authClient.signUp.email({
         name: username,
-        email,
-        password,
+        email:email,
+        password: password,
         image: photoURL,
       });
 

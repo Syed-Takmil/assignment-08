@@ -34,10 +34,12 @@ toast.success("Profile updated successfully!")
   <legend className="fieldset-legend text-xl font-semibold">Update Profile</legend>
 
   <label className="label text-xl font-semibold">New UserName</label>
-  <input type="text" className="input w-full" placeholder="New Username" name="name" />
+  <input type="text" className="input w-full" placeholder="New Username" name="name" required />
 
-  <label className="label text-xl font-semibold">Photo Url</label>
-  <input type="url" className="input w-full" placeholder="Photo URL" name="photoURL" />
+  <label className="label text-xl font-semibold" htmlFor="photoURL">
+    Photo Url
+  </label>
+  <input type="url" className="input w-full" placeholder="Photo URL" name="photoURL" required />
 
   <button type='submit' className="btn btn-neutral mt-4" >
     Save Changes & Update
