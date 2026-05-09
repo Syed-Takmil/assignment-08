@@ -1,3 +1,9 @@
+
+
+
+
+/** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactCompiler: true,
 
@@ -6,6 +12,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000",
+        pathname: "/**",
       },
     ],
   },
