@@ -20,7 +20,7 @@ const DetailsPage = async({params}) => {
          const valueStyle="font-semibold text-green-500";
          const qStyle="font-extralight"
     return (
-        <div className='my-5  py-auto grid grid-cols-1 lg:grid-cols-2 gap-2 justify-between items-center w-10/12
+        <div className='my-5 bg-base-200  py-auto grid grid-cols-1 lg:grid-cols-2 gap-2 justify-between items-center w-10/12
          mx-auto'>
                   <figure>
        <Image 

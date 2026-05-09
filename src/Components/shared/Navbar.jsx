@@ -20,6 +20,7 @@ const user=session?.user
    <NavLink href={'/'}> <li>Home</li></NavLink>
    <NavLink href={'/animals'}> <li>All Animals</li></NavLink>
     <NavLink href={'/my-profile'}><li>My Profile</li></NavLink>
+    <NavLink href={'/about-us'}><li>About Us</li></NavLink>
     </>;
     return (
             <div className="navbar  p-2 grid gap-4 md:flex bg-base-100 h-full shadow-sm">

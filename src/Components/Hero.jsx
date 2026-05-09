@@ -34,7 +34,7 @@ const Hero = () => {
 <div
 className=" grid object-contain gap-2 md:gap-4 justify-start my-auto items-center text-[20px] absolute top-5 h-fit left-10 lg:left-20 bottom-1.5 text-black ml-1 lg:ml-10 rounded-lg">
 
-<animated.div style={heroAnimation}>
+<animated.div  style={heroAnimation}>
        <div className="font-extrabold text-2xl">  Get Your Qurbani Animal 🐐🐄  </div>
           <span className="font-medium text-xl"> • Healthy Animals • Best Price 
             <br />

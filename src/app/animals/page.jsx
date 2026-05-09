@@ -34,7 +34,7 @@ const[loading,setLoading]=useState(true)
   }
 if(loading){
     return(
-         <div className="flex container mx-auto text-center justify-center items-center gap-5 my-auto">
+         <div className="flex container  mx-auto text-center justify-center items-center gap-5 my-auto">
             <h2>Loading</h2>
        <div className="flex justify-center items-center justify-items-center min-h-screen">
           <span className="loading loading-dots loading-xl"></span>
@@ -44,7 +44,7 @@ if(loading){
 }
   return (
     
-       <div className="w-28/30 mx-auto my-5 container">
+       <div className="w-28/30 mx-auto my-5  container">
 
       <div className="dropdown my-4 dropdown-right dropdown-hover">
 
